@@ -3,7 +3,7 @@
 > Sensus is a social media project made by [me](https://github.com/vbzt)
 
 ## How to use
-> Instalation
+> Installation
 
 ```bash
 npm install
@@ -30,9 +30,9 @@ npm run start
  
 > Other dependencies:
 
- 1. bcrypt
+ 1. cookies/sessions
  2. flash messages
- 3. cookies/sessions
+ 3. bcrypt
  4. dotenv
 
  
