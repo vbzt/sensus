@@ -1,0 +1,20 @@
+  <a class = "btn" href="/profile">Return</a>
+  <h1>Creating post</h1>
+  <form action="/create" method="post">
+    <div class="form-control">
+      <fieldset class = 'postField'>
+        <textarea wrap="hard" name="post" id="" placeholder="What are you thinking right now?" cols="30" rows="3"></textarea>
+      </fieldset>
+    </div>
+      {{#if error}}
+
+    <div class="form-control">
+      <span class="flashError"> <i class="fa-solid fa-circle-exclamation"></i>{{messages.message}}</span>
+    </div>
+
+    {{/if}}
+    <div class="form-control">
+      <button type="submit">Post</button>
+    </div>
+
+  </form>

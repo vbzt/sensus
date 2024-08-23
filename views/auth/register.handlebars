@@ -1,0 +1,59 @@
+<h1>Register</h1>
+<form action="/register" method="post">
+
+  <div class="form-control">
+    <fieldset>
+      <legend>Username</legend>
+      <input type="text" name = 'username' placeholder="..." required>
+    </fieldset>
+    {{#if userError}}
+      <div class="form-error">
+        <span class="flashError"> <i class="fa-solid fa-circle-exclamation"></i> {{messages.message}}</span>
+      </div>
+    {{/if}}
+  </div>
+
+  <div class="form-control">
+    <fieldset>
+      <legend>Email</legend>
+      <input type="email" name = 'email' placeholder="..." required>
+    </fieldset>
+    {{#if emailError}}
+      <div class="form-error">
+        <span class="flashError"> <i class="fa-solid fa-circle-exclamation"></i> {{messages.message}}</span>
+      </div>
+    {{/if}}
+  </div>
+
+  <div class="form-control">
+    <fieldset>
+      <legend>Password</legend>
+      <input type="password" name = 'password' placeholder="..." required>
+    </fieldset>
+  </div>
+  {{#if passwordError}}
+      <div class="form-error">
+        <span class="flashError"> <i class="fa-solid fa-circle-exclamation"></i> {{messages.message}}</span>
+      </div>
+    {{/if}}
+
+  <div class="form-control">
+    <fieldset>
+      <legend>Confirm your password</legend>
+      <input type="password" name = 'confirmPassword' placeholder="..." required>
+    </fieldset>
+    {{#if confirmError}}
+      <div class="form-error">
+        <span class="flashError"> <i class="fa-solid fa-circle-exclamation"></i> {{messages.message}}</span>
+      </div>
+    {{/if}}
+  </div>
+
+  <div class="form-control">
+    <button type="submit">Register</button>
+  </div>
+
+  <div class="form-control">
+    <span>Already have an account? <a href="/login">Sign in <span class="colored">here</span></a></span>
+  </div>
+</form>

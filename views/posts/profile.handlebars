@@ -1,0 +1,27 @@
+{{#if messages.message}} 
+    {{#if error}}
+      <span class="flashError">{{messages.message}}</span>
+      {{else}}
+      <span class="flashSucces">{{messages.message}}</span>
+    {{/if}}
+{{/if}}
+<h1 class="title">Profile</h1>
+<a class="btn" href="/posts/create">Make a new post</a>
+<h2 class="title colored">Your posts</h2>
+<ul class="post-dash">
+  {{#each posts}}
+    <li>
+      <span class="post-title">{{this.title}}</span>
+      <span class="post-actions">
+        <a href="/edit/{{this.id}}">Edit</a>
+        <form class="post-form" action="/posts/remove" method="POST">
+          <input type="hidden" name="id" value="{{this.id}}">
+          <button>Delete</button>
+        </form>
+      </span>
+    </li>
+  {{/each}}
+</ul>
+{{#if emptyPosts}}
+  <p class="desc">You haven't posted anything yet. Give it a try!</p>
+{{/if}}

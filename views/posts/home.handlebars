@@ -1,0 +1,51 @@
+<header class="home-header">  
+  <form action="/" class = 'search' method="get">
+   <div class="form-control">
+     <fieldset>
+      <input type="text" name = 'search' placeholder="Looking for something?" required>
+    </fieldset>
+   </div>
+
+    <div class="form-control">
+      <button  class="fa-solid fa-magnifying-glass" type="submit"><i></i></button>
+    </div>
+
+  </form>
+  <div class="order">
+    <span class = 'colored'>Order by:</span>
+
+    <form action="/" method="get">
+      <input type="hidden" name="search" value="{{this.search}}">
+      <input type="hidden" name="order" value="new">
+      <button type="submit"><i class="fa-solid fa-arrow-up"></i> Recent</button>
+    </form>
+
+    <form action="/" method="get">
+      <input type="hidden" name="search" value="{{this.search}}">
+      <input type="hidden" name="order" value="old">
+      <button type="submit"><i class="fa-solid fa-arrow-down"></i> Older</button>
+    </form>
+  </div>
+</header>
+  <div class="filter">
+      {{#if search}}  
+        {{#if emptyPosts}}
+          <p class = 'notFound'>No results for <span class="colored">{{search}}</span> found</p>
+        {{else}}
+        <p> {{postsQnt}} results for <span class="colored">{{search}}</span></p>
+        
+        {{/if}}
+        <span class="colored"><a href="/">Clear filter</a></span>
+      {{/if}}
+  </div>
+<div class="posts-container">
+  {{#each posts}}
+  <div class="post">
+    <p class = 'post-title'>{{this.title}}</p>
+    <div class="post-details">
+      <p class="owner">by <span class = 'colored'> {{this.User.username}} </span></p>
+      <p class="created">{{this.createdAt}}</p>
+    </div>
+  </div>
+  {{/each}}
+</div>

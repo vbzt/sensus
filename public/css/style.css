@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--colorido);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: var(--corFundo);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita o scroll horizontal */
+}
+
+* {
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  font-style: normal;
+  font-family: "Rubik";
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  resize: none;
+  outline: none;
+  border: 0;
+  color: var(--corTexto);
+  scroll-behavior: smooth;
+}
+
+:root {
+  --corTexto: #e3e3e3;
+  --corFundo: #111;
+  --colorido: #5e8ec5;
+  --corCinza: #333;
+  --corCinzaClaro: #575757;
+  --corError: #c55e5e;
+  --corSucesso: #5e8e76;
+}
+
+ 
+nav, footer{
+  height: 7%;
+  background-color: var(--corFundo);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.8cqh;
+}
+
+
+
+nav ul{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  gap: 1cqh;
+  padding: 0;
+}
+
+
+.nav-footer{
+  padding: 0;
+}
+
+main{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2cqh;
+  background-color: var(--corFundo);
+}
+
+main h1{
+  color: var(--colorido);
+}
+
+.btn{ 
+  padding: 1.4cqh;
+}
+
+.btn:hover{
+  background-color: #25252549;
+  cursor: pointer;
+}
+
+
+/* auth */ 
+
+form{
+  display: flex;
+  align-items: center;
+  gap: 1.5cqh;
+  flex-direction: column;
+  width: 100%;
+}
+
+form .form-control{
+  width: 40%;
+}
+
+form .form-control button{
+  width: 100%; 
+  background-color: transparent; 
+  padding: 1cqh;
+  font-size: 1rem;
+  border: 2px solid var(--corCinza);
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+form .form-control button:hover{ 
+  color: var(--corFundo);
+  background-color: var(--corTexto);
+  border: 2px solid var(--corTexto);
+}
+
+fieldset {
+  padding: 0 1cqh;
+  border: 2px solid var(--corCinza);
+  border-radius: 7px;
+  transition: border-color all 0.3s ease-in-out
+}
+
+fieldset legend {
+  padding: 0 1cqh;
+}
+
+fieldset input, textarea{
+  background-color: transparent;
+  padding: 1cqh;
+  width: 100%;
+  font-size: 1rem;
+}
+
+
+fieldset:focus-within {
+  border-color: var(--colorido);
+}
+
+.postField{
+  padding: 1cqh 0.5cqh;
+  max-width: 100%; 
+  max-height: 720px; 
+  border: 2px solid var(--corCinza);
+  border-radius: 7px;
+  transition: border-color all 0.3s ease-in-out;
+}
+
+.postField textarea{
+  min-height: 24px; 
+  max-height: 720px;
+  resize: none;
+  overflow-y: scroll;
+
+  }
+
+.form-error{
+  padding: 1cqh 0;
+}
+
+.flashError, .flashError i{ 
+  color: var(--corError);
+}
+
+.flashSucces{ 
+  color: var(--corSucesso);
+  font-weight: 400;
+}
+
+
+.colored{
+  color: var(--colorido);
+}
+
+/* header  */
+
+.home-header{
+  width: 70%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  gap: 3cqh;
+  top: 15cqh;
+  margin-top: 5cqh;
+}
+
+.search{
+  display: flex;
+  flex-direction: row;
+  gap: 1cqh;
+  height: 100%;
+  width: auto;
+}
+
+
+
+
+.search .form-control{
+  font-size: 1.5cqh;
+  width: auto;
+}
+
+
+
+.search .form-control button{
+  padding: 1cqh;
+  font-size: 1rem;
+  width:auto;
+}
+
+
+.order{ 
+  display: flex;
+  align-items: center;
+  gap: 1cqh;
+  font-size: 1.7cqh;
+}
+
+
+.order button{
+  color: var(--corTexto);
+  background-color: var(--corFundo);
+  padding: 1cqh 3cqh;
+  border-radius: 5px;
+  font-size: 1.5cqh;
+
+}
+
+.order button:hover{
+  background-color: #5555554b;
+  cursor: pointer;
+}
+
+.notFound{ 
+  color: var(--corCinzaClaro);
+  text-align: center;
+}
+
+/* header  */
+
+/* posts */
+.posts-container {
+  width: 80%;
+  padding: 0 10%;
+  max-height: max-content;
+  gap: 2cqh;
+}
+
+
+.post{
+  display: flex;
+  flex-direction: column;
+  gap: 1cqh;
+  border-bottom: 1px solid var(--corCinza);
+  padding: 1.5cqh;
+}
+
+.post .post-title{ 
+  
+  font-size: 2cqh;
+}
+
+.post-details .colored, .filter .colored{
+  font-weight: 600;
+
+ }
+
+.post-details{
+  display: flex;
+  gap: 1cqh;
+  padding: 0 1cqh;
+}
+
+/* posts */
+
+
+
+.post-dash {
+  width: 90%;
+}
+
+.post-dash li {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 7cqh;
+  width: 100%;
+  border-bottom: 1px solid var(--corCinza);
+  padding: 1cqh;
+}
+
+.post-dash li{
+  border-bottom: 1px solid var(--colorido);
+}
+
+.post-dash li .post-title {
+  width: 70%;
+}
+
+.post-dash li .post-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 25%;
+}
+
+.post-dash li .post-actions a, .post-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7cqh;
+  width: 30%;
+  border-radius: 5px;
+}
+
+.post-dash li .post-actions a:hover, .post-form:hover {
+  background-color: #25252549;
+  cursor: pointer;
+}
+
+.post-dash li .post-actions a:hover {
+  color: var(--colorido);
+}
+
+.post-dash li .post-actions .post-form:hover button {
+  color: var(--corError)
+}
+
+.post-dash li .post-actions .post-form button {
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  nav, footer{
+    font-size: 1.5cqh;
+  }
+
+  form .form-control{
+    width: 80%;
+  }
+
+  fieldset, form .form-control button{
+    border: 1px solid var(--corCinza);
+  }
+
+  .home-header{
+    justify-content: start;
+    flex-direction: column;
+    top: 10cqh;
+  }
+
+  .order form{
+    width: auto;
+  }
+
+  .posts-container{ 
+    padding: 0;
+  }
+
+  
+  .search .form-control fieldset input, .order span, .search .form-control button{
+    font-size: 1.3cqh;
+  }
+
+  .flashError, legend, fieldset input, .form-control span, form .form-control button{
+    font-size: 2cqh
+  }
+
+  
+}
+
+
+

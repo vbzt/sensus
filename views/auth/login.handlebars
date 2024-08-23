@@ -1,0 +1,35 @@
+<h1>Login</h1>
+<form action="/login" method="post">
+
+  <div class="form-control">
+    <fieldset>
+      <legend>Username or Email</legend>
+      <input type="text" name = 'user' placeholder="..." required>
+    </fieldset>
+  </div>
+
+  <div class="form-control">
+    <fieldset>
+      <legend>Password</legend>
+      <input type="password" name = 'password' placeholder="..." required>
+    </fieldset>
+  </div>
+
+  {{#if error}}
+
+  <div class="form-control">
+      <span class="flashError"> <i class="fa-solid fa-circle-exclamation"></i>{{messages.message}}</span>
+  </div>
+
+  {{/if}}
+  <div class="form-control">
+    <button type="submit">Login</button>
+  </div>
+  
+  
+  
+
+  <div class="form-control">
+    <span>Don't have an account? <a href="/register">Sign up <span class="colored">here</span></a></span>
+  </div>
+</form>

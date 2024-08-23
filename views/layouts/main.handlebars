@@ -1,0 +1,49 @@
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/" type="image/x-icon">
+    <title>Sensus</title>
+    <link rel="shortcut icon" href="./assets/img/" type="image/x-icon">
+</head>
+<body>
+  <nav>
+    <h1>Sen<span class = 'colored'>sus</span></h1>
+    <div class=""></div>
+    <ul>
+        <li><a href="/">Home</a></li>
+        {{#if session.userid}}
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="/logout">Logout</a></li>
+  
+          {{else}}
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+        {{/if }}
+        
+      </ul>
+  </nav>
+  <main>
+    {{{ body }}}
+  </main>
+  <footer>
+    <p>Made with 💗 by bzt.</p>
+    <nav class = 'nav-footer'>
+      <ul>
+        <li><a href="/">Home</a></li>
+        {{#if session.userid}}
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="/logout">Logout</a></li>
+
+          {{else}}
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+        {{/if }}
+        
+      </ul>
+    </nav>
+    <p>Sensus &copy 2024</p>
+  </footer>
+</body>
+</html>
