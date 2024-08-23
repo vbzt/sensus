@@ -9,7 +9,7 @@
 npm install
 ```
 
-> Runing the app
+> Running the app
 
  - Create a .env file that contains:
 	- POSTGRES_HOST
@@ -35,4 +35,3 @@ npm run start
  3. cookies/sessions
  4. dotenv
 
-"# sensus" 
